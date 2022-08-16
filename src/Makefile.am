@@ -774,7 +774,7 @@ libunwind_la_LDFLAGS =	$(COMMON_SO_LDFLAGS) -XCClinker -nostdlib \
 libunwind_la_LIBADD  += -lc $(LIBCRTS)
 libunwind_la_LIBADD += $(LIBLZMA) $(LIBZ)
 
-AM_CPPFLAGS = -I$(top_srcdir)/include -I$(top_srcdir)/include/tdep-$(arch) -I.
+AM_CPPFLAGS = -I$(top_srcdir)/include -I$(top_srcdir)/include/tdep-$(arch) -I. -fPIC
 AM_CCASFLAGS = $(AM_CPPFLAGS)
 noinst_HEADERS += unwind/unwind-internal.h
 
